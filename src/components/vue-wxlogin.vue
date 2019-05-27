@@ -18,7 +18,7 @@ export default {
               + '&scope=' + this.scope
               + '&redirect_uri='  + this.redirect_uri
               + '&state=' + this.state
-              + '&login_type=jssdk&self_redirect=default&style=' + this.theme
+              + '&login_type=jssdk&self_redirect=' + this.self_redirect + '&style=' + this.theme
               + '&href=' + this.href;
           return _url;
       },
@@ -44,6 +44,10 @@ export default {
       href : {
           type : String,
           default: ''
+      },
+      self_redirect: {
+        type: Boolean,
+        default: true
       },
 },
 }
